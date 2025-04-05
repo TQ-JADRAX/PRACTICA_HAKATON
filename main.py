@@ -32,5 +32,12 @@ class CUENTA_BANCARIA(ABC):
     
         
         
-        
-        
+obj = CUENTA_BANCARIA("Juan Pérez", 2000)
+obj2 = CUENTA_BANCARIA("Santiago Lopez", 2000)
+obj3 = CUENTA_BANCARIA("Javier Rodriguez", 2000)
+
+print(obj.info(0))
+print(obj2.info(0))
+print(obj3.info(0))
+
+
