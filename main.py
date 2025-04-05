@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class CUENTA_BANCARIA:
+class CUENTA_BANCARIA(ABC):
     def __init__(self, titular, saldo_inicial):
         self._titular = titular
         self._saldo = saldo_inicial
