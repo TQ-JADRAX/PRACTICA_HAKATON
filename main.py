@@ -5,9 +5,9 @@ class CUENTA_BANCARIA(ABC):
         self._titular = titular
         self._saldo = saldo_inicial
 
-    def depositar(self, cantidad):
-        self._saldo += cantidad
-
+   
+    
+    
     @property
     def saldo(self):
         return self._saldo
@@ -27,6 +27,28 @@ class CUENTA_BANCARIA(ABC):
     @abstractmethod
     def info(self, cantidad):
         pass
+    def DEPOSITAR(self):
+        while True:
+            try:
+                cantidad = int(input("Ingrese la cantidad a depositar: "))
+                if cantidad > 0:
+                    self._saldo += cantidad
+                    break
+                else:
+                    print("La cantidad a depositar debe ser mayor que 0")
+            except (ValueError, TypeError):
+                print("La cantidad a depositar debe ser un número")
+    def RETIRAR(self):    
+        while True:
+            try:
+                cantidad = int(input("Ingrese la cantidad a retirar: "))
+                if cantidad > 0:
+                    self._saldo -= cantidad
+                    break
+                else:
+                    print("La cantidad a retirar debe ser mayor que 0") 
+            except (ValueError, TypeError):
+                print("La cantidad a retirar debe ser un número")
     
     
     
