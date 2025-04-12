@@ -1,17 +1,16 @@
-from main import CUENTA_BANCARIA
+from main import *
 
-OBJETO_CUENTA_BANCARIA = CUENTA_BANCARIA("Juan Pérez", 2000)
 
-print(OBJETO_CUENTA_BANCARIA.info(0))
+class Cuenta_Inicial(Cuenta_Bancaria):
+    def info(self):
+        print(f'Titular: {self.titular}')
+        print(f'Saldo disponible: {self.saldo}')
 
-OBJETO_CUENTA_BANCARIA.DEPOSITAR()
 
-print(OBJETO_CUENTA_BANCARIA.info(0))
-
-OBJETO_CUENTA_BANCARIA.RETIRAR()
-
-print(OBJETO_CUENTA_BANCARIA.info(0))
-
+cuenta1 = Cuenta_Inicial('Luis',2000)
+cuenta2 = Cuenta_Inicial('Alexys',2000)
+cuenta3 = Cuenta_Inicial('Migue',2000)
+cuenta1.info()
 
 
 

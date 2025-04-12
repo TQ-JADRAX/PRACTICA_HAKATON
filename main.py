@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class CUENTA_BANCARIA(ABC):
+class Cuenta_Bancaria(ABC):
     def __init__(self, titular, saldo_inicial):
         self._titular = titular
         self._saldo = saldo_inicial
@@ -25,9 +25,9 @@ class CUENTA_BANCARIA(ABC):
         self._titular = titular
  
     @abstractmethod
-    def info(self, cantidad):
+    def info(self):
         pass
-    def DEPOSITAR(self):
+    def Depositar(self):
         while True:
             try:
                 cantidad = int(input("Ingrese la cantidad a depositar: "))
@@ -38,7 +38,7 @@ class CUENTA_BANCARIA(ABC):
                     print("La cantidad a depositar debe ser mayor que 0")
             except (ValueError, TypeError):
                 print("La cantidad a depositar debe ser un número")
-    def RETIRAR(self):    
+    def Retirar(self):    
         while True:
             try:
                 cantidad = int(input("Ingrese la cantidad a retirar: "))
@@ -49,17 +49,14 @@ class CUENTA_BANCARIA(ABC):
                     print("La cantidad a retirar debe ser mayor que 0") 
             except (ValueError, TypeError):
                 print("La cantidad a retirar debe ser un número")
-    
-    
-    
-        
-        
-obj = CUENTA_BANCARIA("Juan Pérez", 2000)
-obj2 = CUENTA_BANCARIA("Santiago Lopez", 2000)
-obj3 = CUENTA_BANCARIA("Javier Rodriguez", 2000)
+    ''' def  TRANSFERIR(self):
+        while true:
+            try:
+    '''
+    #def INFO(self):
 
-print(obj.info(0))
-print(obj2.info(0))
-print(obj3.info(0))
+    
+        
+        
 
 
