@@ -1,10 +1,10 @@
-from main import CUENTA_BANCARIA
+from main import Cuenta_Bancaria
 
-cuenta0 = CUENTA_BANCARIA("Tapia",100)
+cuenta0 = Cuenta_Bancaria("Tapia",100)
 
-cuenta1 = CUENTA_BANCARIA("Alfedro",170)
+cuenta1 = Cuenta_Bancaria("Alfedro",170)
 
-cuenta2 = CUENTA_BANCARIA("Bruno",200)
+cuenta2 = Cuenta_Bancaria("Bruno",200)
 from main import *
 
 
